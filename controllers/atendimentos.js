@@ -20,7 +20,7 @@ module.exports = app => {
 
     app.patch('/atendimentos/:id', (req, res) => {
         const id = parseInt(req.params.id)
-        const valores = req.body //não é o aatendimento completo, só alguns valores
+        const valores = req.body //não é o atendimento completo, só alguns valores
 
         Atendimento.altera(id, valores, res)
     })
