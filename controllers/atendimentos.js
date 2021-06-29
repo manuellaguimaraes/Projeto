@@ -6,8 +6,8 @@ module.exports = app => {
         Atendimento.lista(res)
     })
 
-    app.get('/atendimentoS/:id', (req, res) => {
-        const id = parseInt(req.params.id) //convertenco o parâmetro id para inteiro (era string)
+    app.get('/atendimentos/:id', (req, res) => {
+        const id = parseInt(req.params.id) //convertendo o parâmetro id para inteiro (era string)
 
         Atendimento.buscaPorId(id, res)
     }) //parâmentro id
