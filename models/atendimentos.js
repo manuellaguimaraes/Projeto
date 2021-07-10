@@ -61,7 +61,7 @@ class Atendimento {
         const sql = `SELECT * FROM Atendimentos WHERE id=${id}`
 
         conexao.query(sql, (erro, resultados) => {
-            const atendimento = resultados[0] //atendimentos recebe o primeior item do array resultados
+            const atendimento = resultados[0] //atendimentos recebe o primeiro item do array resultados
             if(erro) {
                 res.status(400).json(erro)
             } else {
@@ -80,7 +80,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                res.status(400).json({...valores, id})
+                res.status(200).json({...valores, id})
             }
         })
     }
